@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StemExpert</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+
+
+<body>
+    <script>
+        function toggleSideBar() {
+            console.log(document.getElementById("sidebar").style.display)
+
+            // open side bar by changing display from none to block
+            if (document.getElementById("sidebar").style.display == "none") {
+                document.getElementById("sidebar").style.display = "block";
+                console.log("setting sidebar display block")
+            } else if (document.getElementById("sidebar").style.display == "block") {
+                document.getElementById("sidebar").style.display = "none";
+                console.log("setting sidebar display to none")
+            } else {
+                document.getElementById("sidebar").style.display = "block";
+
+            }
+            console.log("I ran")
+        }
+        function applyLightMode() {
+            if (document.getElementById("dark_btn").checked == true) {
+                document.getElementsByTagName("body")[0].style.backgroundImage = 'url("double-bubble-dark.png")';
+                document.getElementsByTagName("body")[0].style.color = "white";
+            } else if (document.getElementById("light_btn").checked == true) {
+                document.getElementsByTagName("body")[0].style.backgroundImage = 'url("double-bubble.png")';
+                document.getElementsByTagName("body")[0].style.color = "black";
+
+            } else {
+                document.getElementsByTagName("body")[0].style.backgroundImage = 'url("dark-paths.png")';
+                document.getElementsByTagName("body")[0].style.color = "white";
+
+            }
+        }
+
+    </script>
+    <!-- nav -->
+    <nav>
+        <ul class="nav_ul">
+            <li class="nav_li li_element_left"><a onclick="toggleSideBar()" style="cursor: pointer;"><i
+                        class="icon-reorder"></i></a>
+            </li>
+            <li class="nav_li li_element_left">
+                <a href="#"> STEM Expert</a>
+            </li>
+
+            <li class="nav_li li_element_right"><a class="profile_link" href="#">AR</a></li>
+
+            <li class="nav_li li_element_right"><a href="#about">About</a></li>
+
+            <li class="nav_li li_element_right "><a href="#courses">Courses</a></li>
+
+            <li class="nav_li li_element_right"><a href="#paths">Paths</a></li>
+
+
+            <!-- icon-rotate-270 for rotation -->
+
+        </ul>
+    </nav>
+
+    <!-- SIDE BAR -->
+    <div id="sidebar" class="sidebar_off">
+
+        <ul>
+
+            <li
+                style="display:flex; flex-direction: row;align-items: center;justify-content:space-between;margin-right:15%;">
+                <a href="#sidebar">Courses</a>
+                <p style="cursor: pointer;" onclick="toggleSideBar()">x</p>
+            </li>
+            <li><a href="#sidebar">Dashboard</a></li>
+            <hr />
+            <li>
+                <div class="light_div">
+                    <p>Light Mode</p>
+                    <div class="radio_options">
+                        <label class="option">Dark
+                            <input id="dark_btn" class="radio_btn" onclick="applyLightMode()" name="light"
+                                type="radio" />
+                        </label>
+                        <label class="option">Light
+                            <input id="light_btn" class="radio_btn" onclick="applyLightMode()" name="light"
+                                type="radio" />
+                        </label>
+                        <label class="option">DarkBlue
+                            <input id="darkblue_btn" class="radio_btn" onclick="applyLightMode()" name="light"
+                                type="radio" />
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- h1-->
+    <div style="min-height:4vw">
+
+    </div>
+    <h1 style="text-align: center">Explore best STEM courses in the world</h1>
+    <div class="content">
+        <div
+            style="background-color: #9d5ef5d8;border-radius: .25vw;padding:0% 1%; display: flex; justify-content:space-between">
+            <h2>Courses</h2>
+            <select name="" id="" class="dropdown">
+                <option value="cs">Computer Science</option>
+                <option value="cs">Mathematics</option>
+                <option value="cs">Genetic Engineering</option>
+                <option value="cs">Space Technologies</option>
+            </select>
+        </div>
+        <div class="courses" id="courses">
+            <div class="card">
+                <div class="image_div" style="background-image: url('pic1.jpg');">
+                </div>
+                <p style="text-align: center;">Data Structures and Algorithms</p>
+            </div>
+
+            <div class="card">
+                <div class="image_div" style="background-image: url('pic2.png');">
+                </div>
+                <p style="text-align: center;">Scientific computing with python</p>
+            </div>
+            <div class="card">
+                <div class="image_div" style="background-image: url('pic3.png');">
+                </div>
+                <p style="text-align: center;">A detailed introduction to Deep Learning</p>
+            </div>
+            <div class="card">
+                <div class="image_div" style="background-image: url('pic4.jpg');">
+                </div>
+                <p style="text-align: center;">Practical Deep Learning using TensorFlow</p>
+            </div>
+
+            <div class="card">
+                <div class="image_div" style="background-image: url('pic5.png');">
+                </div>
+                <p style="text-align: center;">A detailed introduction to Graph Neural Networks</p>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="content" id="paths">
+        <div
+            style="background-color: #9d5ef5d8;border-radius: .25vw;padding:0% 1%; display: flex; flex-direction:column">
+            <h2>Paths</h2>
+
+        </div>
+        <p style="font-size:110%">
+            Choose a path based on your interests, you can choose as many paths as you like. Each path is a
+            collection
+            of courses required to make you a practitioner of that specialization.
+        </p>
+        <div class="courses">
+
+            <div class="card">
+                <div class="image_div" style="background-image: url('pic6.jpg');">
+                </div>
+                <p style="text-align: center;">Applied Mathematics</p>
+            </div>
+            <div class="card">
+                <div class="image_div" style="background-image: url('pic7.png');">
+                </div>
+                <p style="text-align: center;">Computational Neuroscience</p>
+            </div>
+
+            <div class="card">
+                <div class="image_div" style="background-image: url('pic8.jpg');">
+                </div>
+                <p style="text-align: center;">Software Engineering</p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="about" class="footer">
+        <div class="content" style="color:white;">
+
+            <h1>About</h1>
+            <p>
+                STEMExpert is changing the way we do education. In the new age of internet we have access to everything
+                on the internet, STEM Expert trains people in STEM fields starting from little to no training.
+            </p>
+            <div class="info">
+                <div>
+                    <p>Abdul Rauf</p>
+                </div>
+                <div>
+                    <a href="https://github.com/raufie" target="_blank"
+                        style="display:block;color:white; text-decoration-style: none;"><i
+                            class="icon-github"></i>Github</a>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+
+</html>

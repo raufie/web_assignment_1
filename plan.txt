@@ -1,0 +1,14 @@
+-limit yourself to using html/css and some js
+-write your own css
+-can use font awesome in some places
+-make it responsive for mobile, tablet, laptop
+
+1. make nav ✔
+2. make sidebar ✔
+3. add courses section
+    -make a card class so it becomes easy, img, text...
+4. add paths section
+5. add footer
+6. add jump to top (optional)
+7. Add light mode functionality (optional)✔
+8. deploy the site on heroku
