@@ -4,7 +4,9 @@ body {
     background-image:url("double-bubble.png");
     background-repeat: repeat;
 }
-
+.min_height_from_nav{
+    min-height:4vw;
+}
 /* NAV STYLES */
 .nav_ul {
     position:fixed;
@@ -174,4 +176,80 @@ div.card:hover{
     align-items: center;
     font-size:125%;
     /* font-size:100%; */
+}
+
+
+@media only screen and (max-width:600px) {
+
+    .nav_li a {
+        text-decoration: none;
+        color:white;
+        font-size:100%;
+        /* height: 100%;
+        width:100%; */
+        /* padding: 1% 4%; */
+        /* padding: 10px 42%; */
+        
+    }
+    .nav_ul {
+        position:fixed;
+        background:#0F40A8;
+        width:100%;
+        padding:0 ;
+        margin: 0 0 0 0 ;
+        overflow: hidden;
+        text-align:center;
+        /* floating elements don't take up space
+        overflow hidden triggers a new block format wich prevents ul
+        from collapsing 
+        */
+        top:0;
+        list-style-type: none;
+        z-index: 1;
+        
+    }
+    
+.nav_li{
+    display:flex;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 1% 4%;
+    align-items: center;
+   
+}
+
+
+.nav_li a {
+text-decoration: none;
+color:white;
+font-size:150%;
+/* height: 100%;
+width:100%; */
+/* padding: 1% 4%; */
+/* padding: 10px 42%; */
+
+}
+#sidebar {
+    margin-top:4.225vw;
+    width: 75%;
+  
+}  
+ .min_height_from_nav{
+    min-height:20vw;
+}
+.card {
+    height:50vw;
+    width: 100%;
+    border: 5.5px solid rgb(26, 92, 0);
+    border-radius: 1.5vw;
+    font-size: 115%;
+    margin: 1% 1% 1% 1%;
+    cursor:pointer;
+    background:rgba(5, 161, 251, 0.822);
+    transition:0.25s;
+    color:black;
+    display:flex;
+    flex-direction: column;
+    
+}
 }
